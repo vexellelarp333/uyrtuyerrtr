@@ -1,0 +1,135 @@
+<!doctype html>
+<html lang="ru">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta
+      name="description"
+      content="Учебный планировщик задач для практики событий JavaScript."
+    />
+    <title>EVENT TASKS</title>
+    <link rel="icon" href="./assets/favicon.svg" type="image/svg+xml" />
+    <link rel="stylesheet" href="./css/style.css" />
+    <script src="./js/script.js" defer></script>
+  </head>
+  <body>
+    <div class="page-shell">
+      <header class="site-header">
+        <a
+          href="#top"
+          class="brand"
+          aria-label="Event Tasks — к началу страницы"
+          ><span class="brand__mark">E</span
+          ><span>EVENT<span class="brand__accent">TASKS</span></span></a
+        >
+      </header>
+      <main id="top">
+        <section class="hero" aria-labelledby="page-title">
+          <div class="hero__copy">
+            <p class="eyebrow">
+              <span class="eyebrow__dot"></span> УЧЕБНАЯ ПРАКТИКА
+            </p>
+            <h1 id="page-title">Мой день.<br /><span>Мои действия.</span></h1>
+            <p class="hero__lead">
+              Три события JavaScript, одна понятная страница. Добавляйте задачи
+              и наблюдайте, как меняется интерфейс.
+            </p>
+          </div>
+          <div class="hero__graphic" aria-hidden="true">
+            <span>JS / EVENTS</span><strong>28 <i>↗</i></strong
+            ><small>CLICK · INPUT · SUBMIT</small>
+          </div>
+        </section>
+        <div class="workspace">
+          <div class="workspace__main">
+            <section class="panel" aria-labelledby="form-title">
+              <div class="panel__head">
+                <div>
+                  <p class="kicker">01 / СОЗДАНИЕ</p>
+                  <h2 id="form-title">Новая задача</h2>
+                </div>
+                <button
+                  type="button"
+                  class="link-button"
+                  id="help-button"
+                  aria-controls="help-text"
+                >
+                  Как это работает?
+                </button>
+              </div>
+              <p id="help-text" class="help-text" hidden>
+                Обработчик <code>submit</code> реагирует на отправку формы.
+                Метод <code>preventDefault()</code> не даёт странице
+                перезагрузиться.
+              </p>
+              <form id="task-form" class="task-form" novalidate>
+                <label for="task-input">Название задачи</label>
+                <div class="task-form__row">
+                  <input
+                    id="task-input"
+                    type="text"
+                    placeholder="Например, повторить JavaScript"
+                    maxlength="70"
+                    autocomplete="off"
+                  />
+                  <button type="submit" class="primary-button">
+                    Добавить <span aria-hidden="true">↗</span>
+                  </button>
+                </div>
+              </form>
+              <div class="preview" aria-live="polite">
+                <span>ПРЕДПРОСМОТР</span
+                ><strong id="task-preview">Здесь появится ваша задача</strong>
+              </div>
+            </section>
+            <section class="panel" aria-labelledby="list-title">
+              <div class="panel__head">
+                <div>
+                  <p class="kicker">02 / СПИСОК</p>
+                  <h2 id="list-title">Мои задачи</h2>
+                </div>
+                <button type="button" class="link-button" id="clear-button">
+                  Очистить список
+                </button>
+              </div>
+              <ul id="task-list" class="task-list">
+                <li class="task-item">Повторить тему DOM</li>
+                <li class="task-item">Открыть инструменты разработчика</li>
+              </ul>
+            </section>
+          </div>
+          <aside class="workspace__side">
+            <section class="panel guide-panel" aria-labelledby="guide-title">
+              <p class="kicker">03 / ТРИ СОБЫТИЯ</p>
+              <h2 id="guide-title">Что мы изучаем</h2>
+              <div class="guide-item">
+                <span class="guide-item__icon">01</span>
+                <div>
+                  <strong>click</strong>
+                  <p>Нажатие на кнопку</p>
+                </div>
+              </div>
+              <div class="guide-item">
+                <span class="guide-item__icon">02</span>
+                <div>
+                  <strong>input</strong>
+                  <p>Ввод текста в поле</p>
+                </div>
+              </div>
+              <div class="guide-item">
+                <span class="guide-item__icon">03</span>
+                <div>
+                  <strong>submit</strong>
+                  <p>Отправка формы</p>
+                </div>
+              </div>
+            </section>
+          </aside>
+        </div>
+      </main>
+      <footer class="site-footer">
+        <span>EVENT TASKS</span><span>HTML · CSS · JAVASCRIPT</span>
+      </footer>
+    </div>
+  </body>
+</html>
